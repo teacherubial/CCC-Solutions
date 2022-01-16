@@ -2,25 +2,15 @@
 
 
 def flip_h(grid):
-    temp = grid[0][0]
-    grid[0][0] = grid[1][0]
-    grid[1][0] = temp
-
-    temp = grid[0][1]
-    grid[0][1] = grid[1][1]
-    grid[1][1] = temp
+    grid[0][0], grid[1][0] = grid[1][0], grid[0][0]
+    grid[0][1], grid[1][1] = grid[1][1], grid[0][1]
 
     return grid
 
 
 def flip_v(grid):
-    temp = grid[0][0]
-    grid[0][0] = grid[0][1]
-    grid[0][1] = temp
-
-    temp = grid[1][0]
-    grid[1][0] = grid[1][1]
-    grid[1][1] = temp
+    grid[0][0], grid[0][1] = grid[0][1], grid[0][0]
+    grid[1][0], grid[1][1] = grid[1][1], grid[1][0]\
 
     return grid
 
